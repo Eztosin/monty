@@ -47,7 +47,10 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+void check_args_and_file(int ac, char *argv, FILE **op_file);
 void set_push_data(int data);
 void free_dlistint(stack_t *stack);
+void exec_opcode(instruction_t *opcodes, stack_t **stack,
+		 unsigned int line_number, const char *opcode, const char *args);
 
 #endif
