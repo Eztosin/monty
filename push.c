@@ -1,12 +1,9 @@
 #include "monty.h"
 
-int push_data;
-
 /**
 * push - Adds a new node to the top of the stack.
 * @stack: Double pointer to the head of the stack.
 * @line_number: Line number from byte code file.
-* @data: string representation of integer data.
 */
 
 void push(stack_t **stack, unsigned int line_number)

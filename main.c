@@ -3,9 +3,9 @@
 int push_data;
 
 /**
-* main - 
-*
-*
+* main - runs monty byte code files
+* @argc: argument count.
+* @argv: argument vector.
 */
 
 int main(int argc, char *argv[])
