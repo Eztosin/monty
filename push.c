@@ -29,8 +29,6 @@ new_node->n = push_data;
 new_node->next = *stack;
 new_node->prev = NULL;
 
-push_data = 0;
-
 if (*stack != NULL)
 (*stack)->prev = new_node;
 
