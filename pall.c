@@ -8,15 +8,16 @@
 
 void pall(stack_t **stack, unsigned int line_number)
 {
-stack_t *temp;
+stack_t *new_node;
 (void) line_number;
-temp = *stack;
+new_node = *stack;
+
 if (*stack == NULL)
 return;
 
-while (temp != NULL)
+while (new_node != NULL)
 {
-printf("%d\n", temp->n);
-temp = temp->next;
+printf("%d\n", new_node->n);
+new_node = new_node->next;
 }
 }
