@@ -10,7 +10,7 @@
 */
 
 void exec_opcode(instruction_t *opcodes, stack_t **stack,
-		 unsigned int line_number, const char *opcode, const char *args)
+unsigned int line_number, const char *opcode, const char *args)
 {
 int i, opcode_found = 0;
 
@@ -22,8 +22,16 @@ if (strcmp(opcode, "push") == 0)
 {
 if (args != NULL)
 {
+if (check_args(args))
+{
 push_data = atoi(args);
 opcodes[i].f(stack, line_number);
+}
+else
+{
+fprintf(stderr, "L%u: usage: push integer\n", line_number);
+exit(EXIT_FAILURE);
+}
 }
 else
 {
@@ -40,9 +48,5 @@ break;
 }
 }
 
-if (!opcode_found)
-{
-fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-exit(EXIT_FAILURE);
-}
+check_opcode(opcode_found, line_number, opcode);
 }

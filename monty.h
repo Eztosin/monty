@@ -52,5 +52,8 @@ void set_push_data(int data);
 void free_dlistint(stack_t *stack);
 void exec_opcode(instruction_t *opcodes, stack_t **stack,
 		 unsigned int line_number, const char *opcode, const char *args);
+int check_args(const char *args);
+int check_opcode(int opcode_found, unsigned int line_number,
+		 const char *opcode);
 
 #endif
