@@ -42,5 +42,5 @@ exec_opcode(opcodes, &stack, line_number, opcode, args);
 }
 free(line);
 fclose(bytecode_file);
-exit(EXIT_SUCCESS);
+return (EXIT_SUCCESS);
 }
