@@ -41,6 +41,7 @@ exec_opcode(opcodes, &stack, line_number, opcode, args);
 }
 }
 free(line);
+free_dlistint(stack);
 fclose(bytecode_file);
 return (EXIT_SUCCESS);
 }

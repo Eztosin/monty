@@ -20,5 +20,6 @@ new_node = *stack;
 
 if ((*stack) != NULL)
 (*stack)->prev = NULL;
+
 free(new_node);
 }
